@@ -1,0 +1,37 @@
+<!--Should be the screen immediately after successful login/registration-->
+
+<h3>I see you've found the quizzes, {{user.username}}. Welcome to Quiz-Whiz!</h3>
+
+<div ng-if="lastsolution" id="lastsolution">
+  The last time you played, you got a {{lastSolution}}/3.
+</div>
+
+<div id="playdiv">
+  <form ng-submit="playQuiz()">
+    Give the button a click to play a Quiz-Whiz Quiz...
+    <br>
+    <br>
+    <button type="submit" id="playbutton">Play!</button>
+  </form>
+</div>
+<br>
+<br>
+
+<div id="leaderboard">
+  <h3>Scores:</h3>
+  <span id="filterScore">Search: <input type="text" ng-model="searchText"></span>
+  <br>
+  <br>
+  <table>
+    <tr>
+      <th>Name </th>
+      <th>Score </th>
+      <th>Percentage </th>
+    </tr>
+    <tr ng-repeat="solution in solutions | orderBy: '-correctAnswerPercent' | filter:searchText">
+      <td>{{solution._quizUser.username}}</td>
+      <td>{{solution.correctAnswerCount}}/3</td>
+      <td>{{solution.correctAnswerPercent}}%</td>
+    </tr>
+  </table>
+</div>

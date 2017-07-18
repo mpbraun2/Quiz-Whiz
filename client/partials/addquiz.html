@@ -1,0 +1,20 @@
+<div>
+    <h3>Add a Quiz Question!</h3>
+    <!--should use addQuiz in front end quizController-->
+    <form ng-submit="addQuiz()">
+        <!--real, fake, fake-->
+        <label>Question:</label>
+        <textarea placeholder="Enter a new question" cols="50" rows="2" required ng-model="quizinfo.question"></textarea>
+        <br>
+        <label>Correct Answer:</label>
+        <input type="text" required ng-model="quizinfo.correctAnswer" placeholder="Correct Answer">
+        <br>
+        <label>False Answer 1:</label>
+        <input type="text" required ng-model="quizinfo.falseAnswer1" placeholder="False Answer">
+        <br>
+        <label>False Answer 2:</label>
+        <input type="text" required ng-model="quizinfo.falseAnswer2" placeholder="False Answer">
+        <br>
+        <button type="submit" id="newQuestionButton">Add Quiz Question</button>
+    </form>
+</div>

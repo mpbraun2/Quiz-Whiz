@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>   
+    <link rel="stylesheet" href="/main.css">
+    <!-- DEPENDENCIES -->
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="/angular-messages/angular-messages.js"></script>
+    <script src="/angular-cookies/angular-cookies.js"></script>
+    <!-- MODULES -->
+    <script src="/app.js"></script>
+    <!-- FACTORIES -->
+    <script src="factories/quizFactory.js"></script>
+    <script src="factories/userFactory.js"></script>
+    <!--CONTROLLERS -->
+    <script src="controllers/quizController.js"></script>
+    <script src="controllers/usersController.js"></script>
+  <title>Quiz-Whiz</title>
+</head>
+<body>
+  <div>
+    <span id='banner'><h1>Quiz-Whiz</h1></span>
+      <a href="/#!/">Home</a> | <a href="/#!/addquiz">Add a Question</a><a href="/#!/" ng-controller="homeController" ng-click="logout()" id="logout">Logout</a>
+    <div ng-view="">
+    </div>
+  </div>
+</body>
+</html>

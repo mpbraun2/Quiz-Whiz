@@ -1,0 +1,47 @@
+*{
+    font-family: Courier New, Courier, monospace;
+    background-color: white;
+}
+#logout{
+    position: absolute;
+    right: 50px;
+}
+#playbutton{
+    margin: auto;
+    width: 20%;
+    color:white;
+    background-color:#2b78e4
+}
+#playdiv{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    padding:10px 0px;
+    background-image: url("galaxy-wallpaper-11.jpg");
+    color:white;
+}
+table, th, td {
+    border: 1px solid black;
+    margin: auto;
+}
+.quizgame{
+    border: 1px solid black;
+}
+.mainQuestion{
+    font-style: oblique;
+}
+#leaderboard{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+#newQuestionButton{
+    color:white;
+    background-color:#2b78e4
+}

@@ -1,0 +1,38 @@
+<h3>Register</h3>
+<form ng-submit="register()">
+  <label>User Name:</label>
+  <br>
+  <input type="text" ng-model="registerUser.username" minlength=2 placeholder="Username"><br>
+  <label>Email:</label>
+  <br>
+  <input type="email" ng-model="registerUser.email" placeholder="Email"><br>
+  <label>Password:</label>
+  <br>
+  <input type="password" ng-model="registerUser.password" minlength=8 placeholder="Password"><br>
+  <label>Confirm Password:</label>
+  <br>
+  <input type="password" ng-model="registerUser.confirm" minlength=8 placeholder="Confirm Password"><br>
+  <input type='submit' value="Register User">
+</form>
+
+<div ng-messages=""></div>
+
+<h3>Login</h3>
+<form ng-submit="login()">
+  <label>Email</label>
+  <br>
+  <input type="email" ng-model="logininfo.email" placeholder="Email"><br>
+  <label>Password</label>
+  <br>
+  <input type="password" ng-model="logininfo.password" placeholder="Password"><br>
+  <input type="submit" value="Login">
+</form>
+
+<div ng-repeat="error in errors">
+  <ul ng-if="error">
+
+    <li ng-if="error.errors.password">{{ error.errors.password.message }}</li>
+    <li ng-if="error.errors.email">{{ error.errors.email.message }}</li>
+    <li ng-if="error.login.message">{{ error.login.message }}</li>
+  </ul>
+</div>

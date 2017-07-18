@@ -1,0 +1,15 @@
+<h6>In this quiz, you get one question, and three possible answers. But beware, two of the answers will be false!</h6>
+
+<form name="actualQuiz" ng-submit="submitAnswers()">
+    <!--https://www.w3schools.com/angular/ng_filter_orderby.asp-->
+    <!--https://www.w3schools.com/angular/ng_filter_limitto.asp-->
+    <div class="quizgame" ng-repeat="quiz in quizzes = (quizzes|orderBy:randomize) | limitTo: 3 track by $index"> 
+        <span class="mainQuestion">{{quiz.question}}</span>
+        <br>
+        <!--The order always is the same, can I fix this?-->
+        <input type="radio" ng-value="false" ng-model="$parent.answerInfo[quiz._id]">{{quiz.falseAnswer1}}<br>
+        <input type="radio" ng-value="alsofalse" ng-model="$parent.answerInfo[quiz._id]">{{quiz.falseAnswer2}}<br>
+        <input type="radio" ng-value="true" ng-model="$parent.answerInfo[quiz._id]">{{quiz.correctAnswer}}<br>
+    </div>
+    <button type="submit">Submit</button>
+</form>
